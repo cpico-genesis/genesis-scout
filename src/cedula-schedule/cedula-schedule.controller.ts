@@ -11,7 +11,8 @@ export class CedulaScheduleController {
   ) {}
 
   @Cron(CronExpression.EVERY_10_SECONDS)
-  handleCron() {
-    console.log(this.sybaseController.obtenerCedulaSybase());
+  async handleCron() {
+    const res = await this.sybaseController.obtenerCedulaSybase();
+    console.log(res);
   }
 }
