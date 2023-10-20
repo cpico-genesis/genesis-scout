@@ -10,5 +10,6 @@ import { MongooseModule } from '@nestjs/mongoose';
   ],
   controllers: [PersonaController],
   providers: [PersonaService],
+  exports: [PersonaService],
 })
 export class PersonaModule {}

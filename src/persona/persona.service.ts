@@ -19,4 +19,16 @@ export class PersonaService {
   async findAll(): Promise<Persona[]> {
     return this.personaModel.find().exec();
   }
+
+  async findByParams(params: any): Promise<Persona> {
+    return this.personaModel.findOne(params).exec();
+  }
+
+  async findIdentificacion(identificacion: string): Promise<Persona> {
+    return this.personaModel.findOne({ identificacion }).exec();
+  }
+
+  async getTotal(): Promise<number> {
+    return this.personaModel.countDocuments().exec();
+  }
 }

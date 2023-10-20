@@ -1,13 +1,12 @@
 import { IsString, IsOptional } from 'class-validator';
 
 export class personaCreateDTO {
-
   @IsString()
   readonly nombre: string;
 
   @IsString()
   @IsOptional()
-  readonly tipoIdentificacion?: number;
+  readonly tipoIdentificacion?: string;
 
   @IsString()
   @IsOptional()

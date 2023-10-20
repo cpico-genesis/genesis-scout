@@ -16,7 +16,7 @@ export class Persona {
   @Prop({
     trim: true,
   })
-  tipoIdentificacion?: number;
+  tipoIdentificacion?: string;
 
   @Prop({
     trim: true,
