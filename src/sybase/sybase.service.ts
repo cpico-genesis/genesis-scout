@@ -18,7 +18,7 @@ export class SybaseService {
         this.logger.error('Something went wrong while connecting to Sybase');
         throw new Error(err);
       }
-      this.logger.log('Connected to Sybase' + process.env.BASE);
+      this.logger.log('Connected to Sybase ' + process.env.BASE);
     });
   }
 
