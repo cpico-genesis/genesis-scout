@@ -62,6 +62,7 @@ export class CedulaScheduleController {
             endPoint: 'undefined',
             detalle: 'De ningún endoint se obtuvo la información',
           });
+          await this.sybaseController.eliminarCedulaSybase(data[0].codigo);
         } else {
           await this.sybaseController.eliminarCedulaSybase(data[0].codigo);
           await this.registrarHistorial({
