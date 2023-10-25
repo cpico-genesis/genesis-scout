@@ -14,7 +14,7 @@ export class personaCreateDTO {
 
   @IsString()
   @IsOptional()
-  readonly identificacion?: string;
+  readonly cedula_ruc?: string;
 
   @IsString()
   @IsOptional()

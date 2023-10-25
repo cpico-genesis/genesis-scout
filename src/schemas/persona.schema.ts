@@ -1,12 +1,12 @@
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
 import { HydratedDocument } from 'mongoose';
 
-export type PersonaDocument = HydratedDocument<Persona>;
+export type PersonaDocument = HydratedDocument<Personas>;
 
 @Schema({
   timestamps: true,
 })
-export class Persona {
+export class Personas {
   @Prop({
     required: true,
     trim: true,
@@ -27,7 +27,7 @@ export class Persona {
     trim: true,
     required: true,
   })
-  identificacion?: string;
+  cedula_ruc?: string;
 
   @Prop({
     trim: true,
@@ -40,4 +40,4 @@ export class Persona {
   estado?: string;
 }
 
-export const PersonaSchema = SchemaFactory.createForClass(Persona);
+export const PersonaSchema = SchemaFactory.createForClass(Personas);

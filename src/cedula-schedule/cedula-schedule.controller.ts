@@ -79,7 +79,7 @@ export class CedulaScheduleController {
     }
   }
 
-  @Cron('*/20 * * * * *')
+  @Cron('*/35 * * * * *')
   async in_cliente() {
     await this.procesarIngreso('in_cliente');
   }
@@ -93,7 +93,7 @@ export class CedulaScheduleController {
       denominacion: responseSRI.denominacion,
       direccionMatriz: responseSRI.direccionMatriz,
       estado: responseSRI.estado,
-      identificacion: responseSRI.identificacion,
+      cedula_ruc: responseSRI.identificacion,
       tipoIdentificacion: responseSRI.tipoIdentificacion,
     });
 
